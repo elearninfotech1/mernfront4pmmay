@@ -2,11 +2,16 @@ import React, { useContext, useEffect, useState } from "react";
 import adminStyles from "./admin.module.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import AdminSidebar from "./AdminSidebar";
-import { store } from "../App";
 import axios from "axios";
 const AdminDashboard = () => {
   const [data, setData] = useState("");
+<<<<<<< HEAD
   const navigate = useNavigate(); 
+=======
+  const [token, setToken] = useContext(store);
+  const navigate = useNavigate();
+ 
+>>>>>>> 31c701b739fb5bb53e652654b12b770bd3cb65e9
   return (
     <main>
       <section className={adminStyles.bread}>
