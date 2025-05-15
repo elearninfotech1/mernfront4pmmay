@@ -5,10 +5,7 @@ import innerStyles from "./innerpages.module.css";
 import Grid from "@mui/material/Grid";
 import { NavLink } from "react-router-dom";
 import useCustomHokkEx from "./CustomHokkEx";
-const Home = () => {
-  const treatment = useCustomHokkEx(
-    `https://mernback4pmmay.onrender.com/treatment`
-  );
+const Home = () => {  
   return (
     <main>
       <section>
@@ -21,18 +18,7 @@ const Home = () => {
           <h1 className={innerStyles.title}>
             Our <span>Treatment</span>
           </h1>
-          <Grid container spacing={2}>
-            {treatment.map((treat) => {
-              return (
-                <Grid size={3}>
-                  <NavLink to={`/treatmentdetails/${treat._id}/${treat.tname}`}>
-                    <div className={`mb-4 ${innerStyles.bx_shadow}`}>
-                      {treat.tname}
-                    </div>
-                  </NavLink>
-                </Grid>
-              );
-            })}
+          <Grid container spacing={2}>            
           </Grid>
         </Container>
       </section>
